@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-size: 15vw;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swatch {
+  max-width: 300px;
+  border: 3px solid black;
+  padding-bottom: 2rem;
+}
+
+.swatches {
+  display: grid;
+  grid-gap: 2rem;
+  margin: 4rem;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@supports (width: min(300px, 100%)) {
+  .swatches {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}
+
+.gradient-swatch {
+  height: 20rem;
+  width: 15rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border: 4px solid black;
+}
+
+.paint-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.pigment {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.delete {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+.header-container {
+  margin: 5rem;
+  position: relative;
+  text-align: center;
+}
+
+.watercolor {
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+}
