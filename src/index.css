@@ -13,9 +13,20 @@ code {
 }
 
 h1 {
-  font-size: 15vw;
+  font-size: 10vw;
   position: absolute;
-  top: 25%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header p {
+  font-size: 2.5vw;
+  font-weight: 500;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -78,7 +89,7 @@ li {
 }
 
 .header-container {
-  margin: 5rem;
+  margin: 2rem;
   position: relative;
   text-align: center;
 }
@@ -86,5 +97,5 @@ li {
 .watercolor {
   width: 100%;
   height: auto;
-  max-width: 70%;
+  max-width: 50%;
 }
