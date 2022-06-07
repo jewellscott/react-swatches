@@ -34,6 +34,13 @@ function App() {
         <img className="watercolor" src={watercolor} alt=""></img>
       </header>
       <main>
+        {/* <form>
+          <label>
+            Add a new swatch!
+          </label>
+          <input type="text"></input>
+          
+        </form> */}
         <ul className="swatches">
           {paintSwatchesList}
         </ul>
