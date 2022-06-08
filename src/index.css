@@ -19,19 +19,6 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-header p {
-  font-size: 2.5vw;
-  font-weight: 500;
-  color: black;
-  -webkit-text-stroke: 1px white;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 .swatch {
   max-width: 300px;
   border: 3px solid black;

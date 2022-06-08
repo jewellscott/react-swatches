@@ -10,7 +10,7 @@ function App() {
   const paintSwatchesList = swatches.map((swatch, name) => (
     <li className="swatch" key={name}>
       <div className="gradient-swatch" style={{
-        background:`linear-gradient(175deg, #fff, ${swatch.hex})`
+        background:`linear-gradient(355deg, #fff, ${swatch.hex})`
       }}></div>
       <h2 className="paint-name">{swatch.name}</h2>
       <p className="pigment">{swatch.pigment}</p>
