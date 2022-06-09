@@ -14,10 +14,10 @@ code {
 
 h1 {
   font-size: 10vw;
-  position: absolute;
+  /* position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 .swatch {
   max-width: 300px;

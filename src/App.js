@@ -1,11 +1,11 @@
 import './App.css';
 import { paints } from './paints';
-import watercolor from './assets/watercolor.png'
+// import watercolor from './assets/watercolor.png'
 import { useState } from 'react';
 
 function App() {
 
-  const [swatches, setSwatches] = useState(paints, []);
+  const [swatches, setSwatches] = useState(paints);
 
   const paintSwatchesList = swatches.map((swatch, name) => (
     <li className="swatch" key={name}>
@@ -46,8 +46,8 @@ function App() {
   return (
     <div className="App">
       <header className="header-container">
-        <h1>Swatchery</h1>
-        <img className="watercolor" src={watercolor} alt=""></img>
+        <h1>watercolors.</h1>
+        {/* <img className="watercolor" src={watercolor} alt=""></img> */}
       </header>
       <main>
         <form className="addSwatch" onSubmit={handleSubmit}>
