@@ -86,3 +86,28 @@ li {
   height: auto;
   max-width: 50%;
 }
+
+form input {
+  margin: 1rem;
+}
+
+form {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+input {
+  background-color: black;
+  border: none;
+  padding: .3rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  max-width: 10rem;
+}
+
+form .btn {
+  padding: .5em;
+  max-width: 100%
+}
