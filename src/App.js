@@ -37,7 +37,7 @@ function App() {
     e.preventDefault();
     const updateSwatches = [
       formData,
-      ...paints
+      ...swatches
     ]
 
     setSwatches(updateSwatches);
