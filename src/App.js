@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [swatches, setSwatches] = useState(paints);
+  const [swatches, setSwatches] = useState(paints, []);
 
   const paintSwatchesList = swatches.map((swatch, name) => (
     <li className="swatch" key={name}>
@@ -15,7 +15,7 @@ function App() {
       <h2 className="paint-name">{swatch.name}</h2>
       <p className="pigment">{swatch.pigment}</p>
       <p className="brand">{swatch.brand}</p>
-      <button className="delete" onClick={() => deleteSwatch(swatch)}>Delete</button>
+      <button className="btn" onClick={() => deleteSwatch(swatch)}>Delete</button>
     </li>
   ));
 
@@ -24,9 +24,25 @@ function App() {
     setSwatches(newSwatches);
   }
 
-  // const addSwatch = () => {
-  // }
+  // Add Swatch Form
 
+  const [formData, setFormData] = useState({
+    name: "",
+    pigment: "",
+    brand: "",
+    hex: ""
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const updateSwatches = [
+      formData,
+      ...paints
+    ]
+
+    setSwatches(updateSwatches);
+  }
+ 
   return (
     <div className="App">
       <header className="header-container">
@@ -34,13 +50,33 @@ function App() {
         <img className="watercolor" src={watercolor} alt=""></img>
       </header>
       <main>
-        {/* <form>
-          <label>
-            Add a new swatch!
-          </label>
-          <input type="text"></input>
-          
-        </form> */}
+        <form className="addSwatch" onSubmit={handleSubmit}>
+          <h3>Add a new swatch</h3>
+          <label htmlFor="name">Name</label>
+          <input 
+            value={formData.name} 
+            onChange={(e) => setFormData({...formData, name: e.target.value})} 
+            type="text" name="name" id="name"/>
+
+          <label htmlFor="pigment">Pigment</label>
+          <input 
+            value={formData.pigment}
+            onChange={(e) => setFormData({...formData, pigment: e.target.value})}  
+            type="text" name="pigment" id="pigment"/>
+
+          <label htmlFor="brand">Brand</label>
+          <input 
+            value={formData.brand} 
+            onChange={(e) => setFormData({...formData, brand: e.target.value})} 
+            type="text" name="brand" id="brand"/>
+
+          <label htmlFor="hex">Hex</label>
+          <input 
+            value={formData.hex}
+            onChange={(e) => setFormData({...formData, hex: e.target.value})} 
+            type="text" name="hex" id="hex"/>
+          <input type="submit" value="Add new swatch" className="btn"/>
+        </form>
         <ul className="swatches">
           {paintSwatchesList}
         </ul>
