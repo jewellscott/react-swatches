@@ -11,8 +11,9 @@ function App() {
 
 
   const deleteSwatch = (swatchKey) => {
-    const newSwatches = swatches.filter(swatch => swatch !== swatchKey)
-    setSwatches(newSwatches);
+    setSwatches((s) => {
+      return s.filter(swatch => swatch !== swatchKey)
+    });
   }
 
   const paintSwatchesList = swatches.map((swatch, index) => (
